@@ -1,0 +1,9 @@
+<div id="people"></div>
+
+<script type="text/javascript">
+  $(function() {
+    window.router = new MyApp.Routers.PeopleRouter({people: <%= @people.to_json.html_safe -%>});
+    Backbone.history.stop();
+    Backbone.history.start();
+  });
+</script>
